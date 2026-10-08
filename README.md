@@ -1,6 +1,11 @@
 # Learning-Dashboard
 Learning Dashboard Using Jetpack compose 
 
+Credential: 
+Email: demo@learn.com
+Password: password123
+
+
 1. Architecture
 I used MVVM with a repository layer, which is a clean and common structure for Android. ViewModels expose immutable StateFlow UI state and never reference Android views, so they are easy to unit test. The repository is the single source of truth, so the UI doesn't need to know whether data comes from the network or from Room. Room as the single source of truth means every screen reads from one place, which avoids inconsistent state. Dependencies are passed through a container, so swapping the mock API for Retrofit only changes one line.
 
